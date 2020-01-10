@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1 >Letter case Changer</h1>
+    <h4 id="output"></h4>
+    <script>
+
+    // var input = prompt("enter context ");
+    // arr = input.split("");
+
+    var arr='The Quick Brown Fox';
+    
+    function case_changer(arr) {
+      let arr1 =[];
+      for( let ndx = 0; ndx < arr.length; ndx++) {
+        // 
+        if(arr[ndx] === arr[ndx].toUpperCase()) {
+          arr1[ndx] = arr[ndx].toLowerCase();
+        }
+        if(arr[ndx] === arr[ndx].toLowerCase())
+          arr1[ndx] = arr[ndx].toUpperCase();
+      }
+      arr1 = arr1.join('');
+      return arr1 ;//choose what to retun ??
+    } //end function 
+    var result = case_changer(arr);
+    let p = document.createElement("P");
+    let txtnode = document.createTextNode(result);
+    p.appendChild(txtnode);
+    let output = document.getElementById("output");
+    output.appendChild(p);
+    </script>
+  </body>
+
+</html>
